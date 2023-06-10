@@ -32,7 +32,7 @@ jobs:
           elif [[ -n $(git log --name-only --pretty=oneline --since=1.commit -- Modules/ | grep -E '^Modules/|^Modules$') ]]; then
             echo "::set-output name=app::Modules"
           else
-            echo "::set-output name=app::None"
+            echo "::set-output name=app::Nonevalue"
           fi
 
       - name: Build and Push Docker Image
